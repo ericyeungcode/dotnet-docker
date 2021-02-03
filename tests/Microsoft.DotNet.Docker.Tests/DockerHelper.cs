@@ -196,7 +196,7 @@ namespace Microsoft.DotNet.Docker.Tests
             string userArg = runAsContainerAdministrator ? " -u ContainerAdministrator" : string.Empty;
             string workdirArg = workdir == null ? string.Empty : $" -w {workdir}";
             return ExecuteWithLogging(
-                $"run --name {name}{cleanupArg}{workdirArg}{userArg}{detachArg} {optionalRunArgs} {image} {command}");
+                $"run --platform linux/arm --name {name}{cleanupArg}{workdirArg}{userArg}{detachArg} {optionalRunArgs} {image} {command}");
         }
     }
 }

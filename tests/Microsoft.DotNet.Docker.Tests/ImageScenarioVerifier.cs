@@ -39,7 +39,7 @@ namespace Microsoft.DotNet.Docker.Tests
         {
             string appDir = CreateTestAppWithSdkImage(_isWeb ? "web" : "console");
             List<string> tags = new List<string>();
-            InjectCustomTestCode(appDir);
+            //InjectCustomTestCode(appDir);
 
             try
             {
